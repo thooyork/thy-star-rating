@@ -49,7 +49,14 @@ npm install thy-star-rating
 </html>
 ```
 
-[DEMO](https://smart-sign.com/npm/thy-star-rating/)
+## Styling
+Overwrite colors with this css vars:
+| default | hover | clicked |
+| --- | --- | --- |
+|```--star-default-color```|```--star-halo-color```|```--star-rated-color```|
 
 
-✨ Have fun ! 🕺
+## Demo (or it didn't happen)
+[VISIT DEMO SITE](https://smart-sign.com/npm/thy-star-rating/)
+
+## ✨ Have Fun ! 🕺
