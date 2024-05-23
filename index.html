@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/star.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Rating</title>
+  <script type="module" src="./src/thy-star-rating.ts"></script>
+  <style>
+    body {
+      padding: 2% 0 0 0;
+    }
+
+    thy-star-rating {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 20px auto;
+      max-width: 150px;
+    }
+
+    .outputWrapper {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      margin: 0;
+      padding: 0;
+
+      .output {
+        position: relative;
+        padding: 10px;
+        height: 150px;
+        background-color: #FFF;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12px;
+        overflow: auto;
+      }
+
+      h2 {
+        margin: 0;
+        padding: 5px 0;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #efefef;
+      }
+
+      .pale {
+        color: #666;
+      }
+    }
+  </style>
+</head>
+
+<body style="background-color:#999">
+  <thy-star-rating></thy-star-rating>
+  <thy-star-rating value="1"></thy-star-rating>
+  <thy-star-rating value="2"></thy-star-rating>
+  <thy-star-rating value="3"></thy-star-rating>
+  <thy-star-rating value="4"></thy-star-rating>
+  <thy-star-rating value="5"></thy-star-rating>
+
+  <div class="outputWrapper">
+    <h2>Custom Event "changed"</h2>
+    <div class="output" id="output"></div>
+  </div>
+</body>
+
+<script>
+  const output = document.getElementById('output');
+  const els = document.querySelectorAll('thy-star-rating');
+  els.forEach((el, idx) => {
+    el.addEventListener('changed', (e) => {
+      output.innerHTML = `[component ${idx + 1}]  Rating changed from ${e.detail.oldValue} 🡒 ${e.detail.value}` + '<br><span class="pale">' + output.innerHTML + '</span>';
+    });
+  });
+</script>
+
+</html>
