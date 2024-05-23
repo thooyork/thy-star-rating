@@ -3,7 +3,7 @@
 This is a simple star-rating web-component built with lit.
 It has a "value" attribute to set the initial value declarative.
 
-[![Screenshot](https://smart-sign.com/npm/thy-star-rating/screenshot.png)
+![Screenshot](https://smart-sign.com/npm/thy-star-rating/screenshot.png)
 
 ## Features
  - small
