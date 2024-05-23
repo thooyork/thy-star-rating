@@ -1,8 +1,10 @@
 {
   "name": "thy-star-rating",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
+  "main": "dist/thy-star-rating.js",
+  "types": "dist/thy-star-rating.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
