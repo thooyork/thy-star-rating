@@ -13,6 +13,8 @@ It has a "value" attribute to set the initial value declarative.
 
 ```
     <thy-star-rating></thy-star-rating>
+    <thy-star-rating readonly></thy-star-rating> //readonly
+    <thy-star-rating disabled></thy-star-rating> //disabled
     <thy-star-rating value="2"></thy-star-rating> // sets the initial Rating to 2 stars
 ```
 
@@ -49,11 +51,20 @@ npm install thy-star-rating
 </html>
 ```
 
+## Attributes
+
+| name | type | default-value |
+| --- | --- | --- |
+| value | number (0-5) | 0 |
+| readonly | boolean | false |
+| disabled | boolean | false |
+
+
 ## Styling
 Overwrite colors with this css vars:
-| default | hover | clicked |
-| --- | --- | --- |
-|```--star-default-color```|```--star-halo-color```|```--star-rated-color```|
+| default | hover | clicked | disabled |
+| --- | --- | --- | --- |
+|```--star-default-color```|```--star-halo-color```|```--star-rated-color```|```--star-disabled-color```|
 
 
 ## Demo (or it didn't happen)

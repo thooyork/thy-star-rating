@@ -2,6 +2,8 @@ import { LitElement } from 'lit';
 
 export declare class ThyStarRating extends LitElement {
     value: number;
+    readonly: boolean;
+    disabled: boolean;
     private oldValue;
     static styles: import('lit').CSSResult;
     private onStarClickHandler;
